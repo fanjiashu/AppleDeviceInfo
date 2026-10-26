@@ -110,6 +110,8 @@ let info = AppleDevice.current(nameAccess: .grantedByApple)
 
 ## Electron
 
+完整接入步骤见 [Mac / Electron 接入文档](docs/mac-electron-integration.md)，包含开发与打包路径、IPC、签名及验收说明。
+
 仓库中的 `electron/` 是不依赖 Electron 版本的 CommonJS + TypeScript 声明适配器。可复制到工程或以本地 package 方式引入；未发布到 npm registry。
 
 将预编译的 `device-info` 放在应用资源目录的 `device-info/device-info`，通过 app-owned 绝对路径调用：
@@ -137,7 +139,7 @@ contextBridge.exposeInMainWorld('deviceInfo', {
 
 如果窗口加载远程或不受信任的内容，按应用既有策略校验 IPC 来源，再返回设备名称。不要向页面开放任意可执行路径或完整 IPC 对象。
 
-electron-builder 配置示例：
+electron-builder v26 配置示例（v27 将 `mac.binaries` 改为 `mac.sign.binaries`）：
 
 ```json
 {
