@@ -1,0 +1,10 @@
+{
+  "name": "@fanjiashu/apple-device-info",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Electron main-process adapter for the bundled AppleDeviceInfo macOS helper",
+  "main": "index.cjs",
+  "types": "index.d.ts",
+  "engines": { "node": ">=18" },
+  "scripts": { "test": "node --test test.cjs" }
+}
