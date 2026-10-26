@@ -23,7 +23,7 @@ https://github.com/fanjiashu/AppleDeviceInfo.git
 .product(name: "AppleDeviceInfo", package: "AppleDeviceInfo")
 ```
 
-私有仓库需要在 Xcode / Git 中配置有访问权限的 GitHub 账号。
+仓库已公开，可直接通过 Xcode / SPM 或 Git 拉取，无需 GitHub 登录授权。
 
 ```swift
 import AppleDeviceInfo

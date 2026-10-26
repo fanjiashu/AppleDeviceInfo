@@ -8,7 +8,7 @@
 
 - 从 [0.1.1 Release](https://github.com/fanjiashu/AppleDeviceInfo/releases/tag/0.1.1) 下载 Mac universal 压缩包，将其中的 `device-info` 放到 `vendor/device-info`。
 - 将 [electron 适配器](https://github.com/fanjiashu/AppleDeviceInfo/tree/0.1.1/electron) 中的 `index.cjs`、`index.d.ts` 复制到 `vendor/apple-device-info/`。适配器要求 Node.js 18+，以 Electron 内置的 Node.js 为准。
-- 仓库为私有，需要有访问权限的 GitHub 账号。
+- 仓库已公开，源码、文档及 Release 附件均可直接访问。
 
 以下示例假设主进程入口位于项目根目录：
 
