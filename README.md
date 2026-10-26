@@ -18,7 +18,7 @@ https://github.com/fanjiashu/AppleDeviceInfo.git
 也可以在 `Package.swift` 中声明：
 
 ```swift
-.package(url: "https://github.com/fanjiashu/AppleDeviceInfo.git", from: "0.1.0")
+.package(url: "https://github.com/fanjiashu/AppleDeviceInfo.git", from: "0.1.1")
 // 对应 target.dependencies：
 .product(name: "AppleDeviceInfo", package: "AppleDeviceInfo")
 ```
@@ -104,7 +104,7 @@ let info = AppleDevice.current(nameAccess: .grantedByApple)
 | `displayModel` | `modelName ?? modelIdentifier` |
 | `displayName` | `userAssignedName ?? deviceName ?? displayModel` |
 
-当前映射表继承原 iOS 客户端的 96 组 iPhone / iPad / iPod 型号。Mac 及其他未收录机型保留真实标识，`modelName` 为 `null`，不猜测营销名称。模拟器优先使用 `SIMULATOR_MODEL_IDENTIFIER`，兼容 Apple Silicon 模拟器。
+当前映射表覆盖 98 组 iPhone / iPad / iPod 型号，包括 iPhone 18 Pro（`iPhone19,2`）和 iPhone 18 Pro Max（`iPhone19,3` / `iPhone19,7`）。`iPhone18,*` 标识仍映射到 iPhone 17 系列，对照 [DeviceKit 的设备映射](https://github.com/devicekit/DeviceKit/blob/master/Source/Device.generated.swift) 维护。Mac 及其他未收录机型保留真实标识，`modelName` 为 `null`，不猜测营销名称。模拟器优先使用 `SIMULATOR_MODEL_IDENTIFIER`，兼容 Apple Silicon 模拟器。
 
 无参数时 stdout 只输出 JSON；`--help` 显示帮助，`--pretty` 输出格式化 JSON。未知参数以 64 退出，写入失败以 1 退出，诊断写 stderr。字段读取失败以 `unknown` / `null` 表达，程序仍输出有效 JSON。
 

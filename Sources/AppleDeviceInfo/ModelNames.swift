@@ -55,6 +55,9 @@ enum ModelNames {
         case "iPhone18,2": return "iPhone 17 Pro Max"
         case "iPhone18,4": return "iPhone Air"
         case "iPhone18,5": return "iPhone 17e"
+        // Identifiers verified against DeviceKit's maintained device mapping.
+        case "iPhone19,2": return "iPhone 18 Pro"
+        case "iPhone19,3", "iPhone19,7": return "iPhone 18 Pro Max"
         /*** iPad ***/
         case "iPad1,1", "iPad1,2": return "iPad 1"
         case "iPad2,1", "iPad2,2", "iPad2,3", "iPad2,4": return "iPad 2"
